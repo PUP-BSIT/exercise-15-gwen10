@@ -33,6 +33,7 @@ class TevesProfile:
         print("• “Failure is success in progress.”")
 
     def menu(self):
+        # Display menu until user selects exit
         while True:
             print("\n+++ Gwen's Menu +++")
             print("1. Greetings")
@@ -43,7 +44,7 @@ class TevesProfile:
             print("0. Back to Main Menu")
 
             choice = input("Enter your choice: ").strip()
-
+            # Process user choice
             match choice:
                 case "1":
                     self.greet()
@@ -56,7 +57,9 @@ class TevesProfile:
                 case "5":
                     self.say_quote()
                 case "0":
+                    # Exit the menu and return to main menu
                     print("\nReturning to main menu...")
                     break
+                    # If the user selects 0, exit the menu
                 case _:
                     print("\nInvalid choice. Please try again.")
