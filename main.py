@@ -1,9 +1,11 @@
 from gwn10package.teves import TevesProfile
+from gwn10package.bataller import BatallerProfile
 
 def main_menu():
     """Main program to display team member profiles."""
     print("\n++ GWN10 Team Members ++")
     print("1. Gwen Teves")
+    print("2. Christian Bataller")
     print("0. Exit")
     return input("Enter your choice: ").strip()
 
@@ -15,6 +17,13 @@ while True:
         case "1":
             teves = TevesProfile("Gwen Teves", 19, "BSIT 2-1")
             teves.menu()
+        case "2":
+            bataller = BatallerProfile(
+                "Christian Bataller",
+                "2nd year",
+                "BSIT"
+            )
+            bataller.menu()
         case "0":
             print("\nExiting the program...")
             break
