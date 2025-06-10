@@ -7,10 +7,11 @@ def main_menu():
     print("0. Exit")
     return input("Enter your choice: ").strip()
 
+# Main program loop to display the main menu and handle user choices
 while True:
     choice = main_menu()
 
-    match choice:
+    match choice: # Using match-case for better readability
         case "1":
             teves = TevesProfile("Gwen Teves", 19, "BSIT 2-1")
             teves.menu()
