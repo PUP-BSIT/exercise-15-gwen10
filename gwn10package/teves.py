@@ -44,6 +44,7 @@ class TevesProfile:
             print("0. Back to Main Menu")
 
             choice = input("Enter your choice: ").strip()
+            
             # Process user choice
             match choice:
                 case "1":
