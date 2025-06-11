@@ -1,6 +1,7 @@
 from gwn10package.teves import TevesProfile
 from gwn10package.bataller import BatallerProfile
 from gwn10package.gonato import GonatoProfile
+from gwn10package.sario import SarioProfile
 
 def display_main_menu():
     """Displays the main team menu and gets user input."""
@@ -8,6 +9,7 @@ def display_main_menu():
     print("1. Gwen Teves")
     print("2. Bataller")
     print("3. Alexa Gonato")
+    print("4. Gerald Sario")
     print("0. Exit")
     
     return input("Enter your choice: ").strip()
@@ -28,6 +30,9 @@ def handle_main_choice(choice):
         case "3":
             gonato = GonatoProfile("Alexa Gonato", 20, "BSIT 2-1")
             gonato.menu()
+        case "4":
+            sario = SarioProfile("Gerald Sario", 20, "BSIT")
+            sario.menu()
         case "0":
             print("\nExiting the program...")
             return False
